@@ -1,6 +1,10 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"log"
+	"math"
+)
 
 func standardDeviation(xs []float64) float64 {
 	return math.Sqrt(variance(xs))
@@ -30,13 +34,18 @@ func relativize(data []float64) []float64 {
 	return nv
 }
 
-func correlation(xs, ys []float64) float64 {
-	return covariance(xs, ys) / (standardDeviation(xs) * standardDeviation(ys))
+func Correlation(xs, ys []float64) (float64, float64, float64, float64) {
+	coviance := covariance(xs, ys)
+	StanX := standardDeviation(xs)
+	StanY := standardDeviation(ys)
+	Corre := covariance(xs, ys) / (standardDeviation(xs) * standardDeviation(ys))
+	return coviance, StanX, StanY, Corre
 }
 
 func covariance(x, y []float64) float64 {
 	if len(x) != len(y) {
-		panic("Vector lengths must be the same")
+		fmt.Println(len(x), len(y))
+		log.Fatalln("length not match")
 	}
 
 	n := len(x)

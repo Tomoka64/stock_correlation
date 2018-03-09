@@ -1,0 +1,31 @@
+{{template "header"}}
+<h1>Correlation ranking among all the searched history</h1>
+<div class="data">
+  <table class="redTable">
+    <thead>
+<tr>
+<th>Company1</th>
+<th>Company2</th>
+<th>Correlation</th>
+</tr>
+</thead>
+<!-- <tfoot>
+<tr>
+<td colspan="3">
+<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+</td>
+</tr>
+</tfoot> -->
+<tbody>
+  {{range .}}
+<tr>
+<td>{{.Data1}}</td>
+<td>{{.Data2}}</td>
+<td>{{.Correlation}}</td>
+</tr>
+{{end}}
+</tbody>
+</table>
+</div>
+<p><a href="/">Go back to search</a></p>
+{{template "footer"}}

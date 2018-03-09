@@ -1,0 +1,16 @@
+{{template "header"}}
+<h1>Put the CODE NUMBER of companies you want to search</h1>
+  <form method="GET" action="/result">
+    <label>Company #1:
+      <input type="text" name="target1">
+    </label>
+    <label>Company #2:
+      <input type="text" name="target2">
+    </label>
+    <input type="submit" id="submit">
+  </form>
+  <br>
+  <h1><a href="/ranking">See the stocks with high correlation</a></h1>
+  <p>You don't know the code number? Search here:
+  <a href="http://www.net-ir.ne.jp/cgi-bin/prv/search.cgi?cord=&k=c&mk=-&nr=-&v=10&c=1">SEARCH</a></p>
+{{template "footer"}}
