@@ -1,4 +1,4 @@
-package main
+package stock_correlation
 
 import (
 	"net/http"

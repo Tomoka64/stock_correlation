@@ -1,4 +1,4 @@
-package main
+package stock_correlation
 
 type Data struct {
 	Data1                    string  `datastore:"data1"`
